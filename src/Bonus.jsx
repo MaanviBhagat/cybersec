@@ -1,5 +1,5 @@
 ﻿import React, { useState } from "react";
-import ReturnToHome from "../components/ReturnToHome";
+import ReturnToHome from "./ReturnToHome";
 
 const cyberTools = [
   { name: "Firewall Booster", rarity: "common", image: "firewall-booster.webp" },
