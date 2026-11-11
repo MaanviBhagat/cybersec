@@ -23,8 +23,6 @@ function App() {
     <Routes>
       {/* Public Routes */}
       <Route path='/' element={<HomePage />} />
-      <Route path='/login' element={<Login />} />
-      <Route path='/signup' element={<Signup />} />
 
       {/* Levels & Activities */}
       <Route path='/level1' element={<Level1 />} />
