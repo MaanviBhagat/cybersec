@@ -1,17 +1,13 @@
 import { useState, useEffect } from "react";
-import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { logout } from "../Redux/Slices/authsliice";
 
 const happyFace = "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Face-smile.svg/1024px-Face-smile.svg.png";
 const nerdFace = "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Emoji_u1f913.svg/1024px-Emoji_u1f913.svg.png";
 const coolFace = "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Emoji_u1f60e.svg/1024px-Emoji_u1f60e.svg.png";
 const surpriseEgg = "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Easter_egg_1.svg/1024px-Easter_egg_1.svg.png";
-const clickSound = "https://www.soundjay.com/button/button-3.mp3";
 const avatars = [happyFace, nerdFace, coolFace];
 
 const HomePage = () => {
-  // const [musicOn, setMusicOn] = useState(true);
   const [darkMode, setDarkMode] = useState(false);
   const [currentAvatar, setCurrentAvatar] = useState(
     avatars[Math.floor(Math.random() * avatars.length)]
@@ -20,13 +16,11 @@ const HomePage = () => {
   const [userDropdownOpen, setUserDropdownOpen] = useState(false);
   const [userData, setUserData] = useState(null);
   const navigate = useNavigate();
-  const dispatch = useDispatch()
+
   useEffect(() => {
-    // Check login status from localStorage
     const loginStatus = localStorage.getItem('isLoggedIn') === 'true';
     setIsLoggedIn(loginStatus);
     
-    // Get user data if logged in
     if (loginStatus) {
       const user = JSON.parse(localStorage.getItem('data') || '{"name":"User","email":"user@example.com","mobile":"1234567890"}');
       setUserData(user);
@@ -49,23 +43,19 @@ const HomePage = () => {
   };
 
   const handleLogin = () => {
-  navigate('/level1');
-};
+    navigate('/level1');
+  };
 
   const toggleUserDropdown = () => {
     setUserDropdownOpen(!userDropdownOpen);
   };
 
-  const handleLogout = async() => {
-
-    const response = await dispatch(logout())
-    // if(response?.payload?.success){
-      localStorage.setItem('isLoggedIn', 'false');
-      localStorage.removeItem('userData');
-      setIsLoggedIn(false);
-      setUserDropdownOpen(false);
-      setUserData(null);
-    // }
+  const handleLogout = () => {
+    localStorage.setItem('isLoggedIn', 'false');
+    localStorage.removeItem('userData');
+    setIsLoggedIn(false);
+    setUserDropdownOpen(false);
+    setUserData(null);
   };
 
   return (
@@ -234,7 +224,7 @@ const HomePage = () => {
           </div>
         ) : (
           <button className="login-btn" onClick={handleLogin}>
-            Login / Signup
+            Start Game
           </button>
         )}
         <button onClick={toggleDarkMode}>
@@ -246,29 +236,10 @@ const HomePage = () => {
 
       <div className="levels">
         {Array.from({ length: 10 }, (_, i) => (
-          <button className="button" onClick={() => handleButtonClick(i+1)} key={i}>Level {i + 1}</button>
+          <button className="button" onClick={() => handleButtonClick(i + 1)} key={i}>Level {i + 1}</button>
         ))}
         <button onClick={() => navigate('/bonus')} className="button">🎁 Bonus Level</button>
       </div>
-
-      {/* <div className="avatar-container">
-        <img
-          src={currentAvatar}
-          className="avatar"
-          alt="Cybersec Character"
-          onClick={showEasterEgg}
-        />
-        <img
-          src={avatars[1]}
-          className="avatar"
-          alt="Cybersec Character"
-        />
-        <img
-          src={avatars[2]}
-          className="avatar"
-          alt="Cybersec Character"
-        />
-      </div> */}
     </div>
   );
 };
