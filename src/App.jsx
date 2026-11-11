@@ -37,4 +37,3 @@ function App() {
 }
 
 export default App;
-'@ | Set-Content -Path src/App.jsx -Encoding utf8
