@@ -1,0 +1,25 @@
+/* NextLevel.css */
+.complete-btn {
+    padding: 12px 24px;
+    font-size: 16px;
+    background-color: #4ade80;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .complete-btn:hover {
+    background-color: #22c55e;
+  }
+  
+  .complete-btn:disabled {
+    background-color: #e2e8f0;
+    cursor: not-allowed;
+  }
+  
+  .completed {
+    background-color: #22c55e;
+  }
+  
