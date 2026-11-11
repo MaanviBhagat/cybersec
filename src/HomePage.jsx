@@ -15,8 +15,6 @@ import Level8 from './Level8';
 import Level9 from './Level9';
 import Level10 from './Level10';
 import Concept from './Concept';
-import Login from './Login';
-import Signup from './Signup';
 
 function App() {
   const [count, setCount] = useState(0);
