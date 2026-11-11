@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import { Wrench, Lightbulb } from "lucide-react";
-import ReturnToHome from "../components/ReturnToHome";
+import ReturnToHome from "../ReturnToHome";
 
 const hints = [
   "Make sure the cable wires follow the T568B color sequence.",

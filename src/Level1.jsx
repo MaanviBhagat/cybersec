@@ -1,7 +1,7 @@
 // Level1.js
 import { useEffect, useState } from "react";
-import ReturnToHome from "../components/ReturnToHome";
-import NextLevel from "../components/NextLevel";
+import ReturnToHome from "../ReturnToHome";
+import NextLevel from "../NextLevel";
 import classroom2 from './classroom2.png';
 import "./level1.css";
 

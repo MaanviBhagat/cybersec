@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import ReturnToHome from "../components/ReturnToHome";
+import ReturnToHome from "./ReturnToHome";
 
 const Level10 = () => {
   const [step, setStep] = useState(1);
@@ -109,17 +109,20 @@ const Level10 = () => {
 
       {/* Step 4: Recap */}
       {step === 4 && (
-  <div style={styles.theory}>
-    <h3>📘 Recap: What You Learned</h3>
-    <ul>
-      <li>Access Control must enforce least privilege — Ravi had too much access.</li>
-      <li>Monitoring tools like SIEM or DLP must alert unusual behavior (e.g. cloud uploads).</li>
-      <li>VPN enforcement should be mandatory — Ravi bypassed this weak point.</li>
-      <li>Firewalls should block unused ports like FTP (21) to prevent external intrusion.</li>
-    </ul>
-    <p>🎉 Level 10 Complete! You've stopped an insider threat and fixed a firewall! 🛡️</p>
-  </div>
-)};
+        <div style={styles.theory}>
+          <h3>📘 Recap: What You Learned</h3>
+          <ul>
+            <li>Access Control must enforce least privilege — Ravi had too much access.</li>
+            <li>Monitoring tools like SIEM or DLP must alert unusual behavior (e.g. cloud uploads).</li>
+            <li>VPN enforcement should be mandatory — Ravi bypassed this weak point.</li>
+            <li>Firewalls should block unused ports like FTP (21) to prevent external intrusion.</li>
+          </ul>
+          <p>🎉 Level 10 Complete! You've stopped an insider threat and fixed a firewall! 🛡️</p>
+        </div>
+      )}
+    </div>
+  );
+};
 
 const styles = {
   container: {

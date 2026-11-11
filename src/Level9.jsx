@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import ReturnToHome from "../components/ReturnToHome";
-import NextLevel from "../components/NextLevel";
+import ReturnToHome from "../ReturnToHome";
+import NextLevel from "../NextLevel";
 
 // Sample firewall rules
 const spoofRules = [

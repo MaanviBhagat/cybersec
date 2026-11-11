@@ -1,9 +1,11 @@
+@'
 import { useState } from 'react';
 import './App.css';
 import { Route, Routes } from 'react-router-dom';
 
 import HomePage from './HomePage';
 import Bonus from './Bonus';
+import Concept from './Concept';
 import Level1 from './Level1';
 import Level2 from './Level2';
 import Level3 from './Level3';
@@ -14,21 +16,11 @@ import Level7 from './Level7';
 import Level8 from './Level8';
 import Level9 from './Level9';
 import Level10 from './Level10';
-import Concept from './Concept';
-import Login from './Login';
-import Signup from './Signup';
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <Routes>
-      {/* Public Routes */}
       <Route path='/' element={<HomePage />} />
-      <Route path='/login' element={<Login />} />
-      <Route path='/signup' element={<Signup />} />
-
-      {/* Levels & Activities */}
       <Route path='/level1' element={<Level1 />} />
       <Route path='/level2' element={<Level2 />} />
       <Route path='/level3' element={<Level3 />} />
@@ -46,3 +38,4 @@ function App() {
 }
 
 export default App;
+'@ | Set-Content -Path src/App.jsx -Encoding utf8

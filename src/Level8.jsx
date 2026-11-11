@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import ReturnToHome from "../components/ReturnToHome";
-import NextLevel from "../components/NextLevel";
+import ReturnToHome from "../ReturnToHome";
+import NextLevel from "../NextLevel";
 
 const App = () => {
   const [sql, setSql] = useState("");
