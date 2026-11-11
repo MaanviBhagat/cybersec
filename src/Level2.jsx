@@ -1,4 +1,4 @@
-
+﻿
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "./level2.css";
@@ -49,7 +49,7 @@ const Level2 = () => {
         <span>Return Home</span>
       </button> */}
       <a href="/" className="home-button" onClick={handleHomeClick}>
-          <span className="home-icon">🏠</span>
+          <span className="home-icon">ðŸ </span>
           <span>Back to All Levels</span>
         </a>
 

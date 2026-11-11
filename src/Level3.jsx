@@ -1,4 +1,4 @@
-
+﻿
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -60,7 +60,7 @@ const Level3 = () => {
       <div className="level3-container">
         <div className="level-header">
           <h1>LEVEL 3: Wi-Fi Emergency!</h1>
-          <div className="wifi-icon">📶</div>
+          <div className="wifi-icon">ðŸ“¶</div>
         </div>
         
         <div className="scenario-box">
@@ -71,25 +71,25 @@ const Level3 = () => {
         {!success ? (
           <div className="options-grid">
             <button className="option-btn" onClick={() => showPopup("You tried guessing passwords... but no luck!")}>
-              <span className="option-icon">🔑</span>
+              <span className="option-icon">ðŸ”‘</span>
               <span>Guess Password</span>
             </button>
             <button className="option-btn" onClick={() => showPopup("Scanning for open networks... No luck in this neighborhood!")}>
-              <span className="option-icon">🔍</span>
+              <span className="option-icon">ðŸ”</span>
               <span>Find Open Wi-Fi</span>
             </button>
             <button className="option-btn" onClick={() => showPopup("Brute-force attack failed! Too many attempts! Your device is now blocked.")}>
-              <span className="option-icon">🔨</span>
+              <span className="option-icon">ðŸ”¨</span>
               <span>Brute-force Attack</span>
             </button>
             <button className="option-btn hack-btn" onClick={hackWiFi}>
-              <span className="option-icon">💻</span>
+              <span className="option-icon">ðŸ’»</span>
               <span>Use Kali Linux Tools</span>
             </button>
           </div>
         ) : (
           <div className="success-container">
-            <h2 className="success-message">🎉 Connection Established! 🎉</h2>
+            <h2 className="success-message">ðŸŽ‰ Connection Established! ðŸŽ‰</h2>
             <p className="warning-message">But remember, hacking Wi-Fi networks is illegal and unethical in real life!</p>
             <div className="lesson-box">
               <h3>What you should do instead:</h3>
@@ -107,14 +107,14 @@ const Level3 = () => {
         
         <div className="navigation-buttons">
           <a href="/" className="home-button" onClick={handleHomeClick}>
-            <span className="home-icon">🏠</span>
+            <span className="home-icon">ðŸ </span>
             <span>Back to All Levels</span>
           </a>
           
           {success && (
             <a href="/level4" className="next-level-button" onClick={handleNextLevelClick}>
               <span>Next Level</span>
-              <span className="next-icon">➡️</span>
+              <span className="next-icon">âž¡ï¸</span>
             </a>
           )}
         </div>

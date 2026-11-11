@@ -1,7 +1,7 @@
-// Level1.js
+﻿// Level1.js
 import { useEffect, useState } from "react";
-import ReturnToHome from "../ReturnToHome";
-import NextLevel from "../NextLevel";
+import ReturnToHome from "./ReturnToHome";
+import NextLevel from "./NextLevel";
 import classroom2 from './classroom2.png';
 import "./level1.css";
 
@@ -24,7 +24,7 @@ useEffect(() => {
   if (learned && !completed) {
     console.log("Setting completed to true");
     setCompleted(true);
-    setPopup("Level Completed! 🎉");
+    setPopup("Level Completed! ðŸŽ‰");
     setInfo("Great job! You've completed Level 1 on networking basics. You're now ready for the next level!");
   }
 }, [topicsLearned]); // Run whenever topicsLearned changes
@@ -44,10 +44,10 @@ useEffect(() => {
   const handleComplete = () => {
     if (allTopicsLearned()) {
       setCompleted(true);
-      setPopup("Level Completed! 🎉");
+      setPopup("Level Completed! ðŸŽ‰");
       setInfo("Great job! You've completed Level 1 on networking basics. You're now ready for the next level!");
     } else {
-      setPopup("Not so fast! 🧐");
+      setPopup("Not so fast! ðŸ§");
       setInfo("You need to learn about all topics before completing this level. Look for any topics that don't have a checkmark yet!");
     }
   };
@@ -56,28 +56,28 @@ useEffect(() => {
     {
       id: "wifi",
       title: "Wi-Fi Basics",
-      icon: "📡",
+      icon: "ðŸ“¡",
       message: "A router connects to the ISP to provide internet access!",
       info: "Wi-Fi is a wireless networking technology..."
     },
     {
       id: "netstat",
       title: "Netstat",
-      icon: "🖥️",
+      icon: "ðŸ–¥ï¸",
       message: "Use netstat to view network connections!",
       info: "Netstat is a command-line tool that provides information..."
     },
     {
       id: "wireshark",
       title: "Wireshark",
-      icon: "🦈",
+      icon: "ðŸ¦ˆ",
       message: "Wireshark helps analyze network traffic!",
       info: "Wireshark is a network protocol analyzer that captures and displays packets in real-time. It helps identify suspicious activity, troubleshoot network problems, and analyze network protocols. Users can filter packets based on protocol, IP address, or port number. It's widely used in cybersecurity for packet-level inspection. Understanding packet headers and content aids in vulnerability detection and prevention. Though powerful, Wireshark requires proper training to avoid misinterpretation."
     },
     {
       id: "nmap",
       title: "Nmap",
-      icon: "🔍",
+      icon: "ðŸ”",
       message: "Nmap scans networks for open ports!",
       info: "Nmap (Network Mapper) is an open-source tool for network exploration and security auditing. It scans devices on a network to identify hosts, open ports, and running services. Nmap is used in ethical hacking and penetration testing to find vulnerabilities. Common scans include TCP connect scan, SYN scan, and OS detection. It supports scripting via NSE (Nmap Scripting Engine) for deeper analysis. Nmap helps administrators secure systems by revealing weak points in the network."
     }
@@ -121,7 +121,7 @@ useEffect(() => {
               >
                 <span className="topic-icon">{topic.icon}</span>
                 <span className="topic-title">{topic.title}</span>
-                {topicsLearned[topic.id] && <span className="checkmark">✓</span>}
+                {topicsLearned[topic.id] && <span className="checkmark">âœ“</span>}
               </button>
             ))}
           </div>
@@ -129,7 +129,7 @@ useEffect(() => {
 
         {info && (
           <div className="info-box">
-            <h3>🔍 Did You Know?</h3>
+            <h3>ðŸ” Did You Know?</h3>
             <p>{info}</p>
           </div>
         )}

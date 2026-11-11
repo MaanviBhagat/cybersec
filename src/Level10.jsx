@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+﻿import React, { useState } from "react";
 import ReturnToHome from "./ReturnToHome";
 
 const Level10 = () => {
@@ -13,35 +13,35 @@ const Level10 = () => {
   const handleSecurityChoice = (choice) => {
     setSelected(choice);
     if (choice === "Weak Access Control & Monitoring") {
-      setResult("✅ Correct! Lack of proper monitoring and access controls led to data loss.");
+      setResult("âœ… Correct! Lack of proper monitoring and access controls led to data loss.");
     } else {
-      setResult("❌ Not quite. Think about what let Ravi go unnoticed.");
+      setResult("âŒ Not quite. Think about what let Ravi go unnoticed.");
     }
   };
 
   const handleFirewallFix = (port) => {
     setFirewallAnswer(port);
     if (port === "21 (FTP)") {
-      setFirewallResult("✅ Correct! Port 21 was left open and must be blocked.");
+      setFirewallResult("âœ… Correct! Port 21 was left open and must be blocked.");
     } else {
-      setFirewallResult("❌ Nope, that port wasn't the issue.");
+      setFirewallResult("âŒ Nope, that port wasn't the issue.");
     }
   };
 
   return (
     <div style={styles.container}>
       <ReturnToHome />
-      <h2 style={styles.heading}>🧑‍💻 Level 10: The Insider Leak</h2>
+      <h2 style={styles.heading}>ðŸ§‘â€ðŸ’» Level 10: The Insider Leak</h2>
 
       {/* Step 1: Story Popup */}
       {step === 1 && (
         <div style={styles.popup}>
-          <h3>📁 The Story So Far...</h3>
+          <h3>ðŸ“ The Story So Far...</h3>
           <p>
-            Mr. Ravi connects his laptop to the internal network and bypasses VPN and endpoint security. He uploads sensitive files to his personal cloud — undetected. 🕵️‍♂️  
+            Mr. Ravi connects his laptop to the internal network and bypasses VPN and endpoint security. He uploads sensitive files to his personal cloud â€” undetected. ðŸ•µï¸â€â™‚ï¸  
             Later, the IT team spots unusual traffic, but it's too late. Can you figure out what went wrong?
           </p>
-          <button onClick={handleNext}>Investigate 🔍</button>
+          <button onClick={handleNext}>Investigate ðŸ”</button>
         </div>
       )}
 
@@ -57,7 +57,7 @@ const Level10 = () => {
           </div>
 
           <div style={styles.questionBox}>
-            <p>❓ What was the main cause of this breach?</p>
+            <p>â“ What was the main cause of this breach?</p>
             {[
               "Antivirus Signature Failure",
               "Weak Access Control & Monitoring",
@@ -76,7 +76,7 @@ const Level10 = () => {
               </button>
             ))}
             {result && <p style={styles.result}>{result}</p>}
-            {result.includes("Correct") && <button onClick={handleNext} style={styles.nextBtn}>Next ➡️</button>}
+            {result.includes("Correct") && <button onClick={handleNext} style={styles.nextBtn}>Next âž¡ï¸</button>}
           </div>
         </>
       )}
@@ -84,7 +84,7 @@ const Level10 = () => {
       {/* Step 3: Bonus Firewall Scenario */}
       {step === 3 && (
         <div style={styles.popup}>
-          <h3>🔥 Firewall Fumble</h3>
+          <h3>ðŸ”¥ Firewall Fumble</h3>
           <p>
             A junior admin accidentally exposed an internal service by leaving a port open on the firewall.  
             Which port do you need to block immediately?
@@ -103,21 +103,21 @@ const Level10 = () => {
             </button>
           ))}
           {firewallResult && <p style={styles.result}>{firewallResult}</p>}
-          {firewallResult.includes("Correct") && <button onClick={handleNext} style={styles.nextBtn}>Final Recap 📘</button>}
+          {firewallResult.includes("Correct") && <button onClick={handleNext} style={styles.nextBtn}>Final Recap ðŸ“˜</button>}
         </div>
       )}
 
       {/* Step 4: Recap */}
       {step === 4 && (
         <div style={styles.theory}>
-          <h3>📘 Recap: What You Learned</h3>
+          <h3>ðŸ“˜ Recap: What You Learned</h3>
           <ul>
-            <li>Access Control must enforce least privilege — Ravi had too much access.</li>
+            <li>Access Control must enforce least privilege â€” Ravi had too much access.</li>
             <li>Monitoring tools like SIEM or DLP must alert unusual behavior (e.g. cloud uploads).</li>
-            <li>VPN enforcement should be mandatory — Ravi bypassed this weak point.</li>
+            <li>VPN enforcement should be mandatory â€” Ravi bypassed this weak point.</li>
             <li>Firewalls should block unused ports like FTP (21) to prevent external intrusion.</li>
           </ul>
-          <p>🎉 Level 10 Complete! You've stopped an insider threat and fixed a firewall! 🛡️</p>
+          <p>ðŸŽ‰ Level 10 Complete! You've stopped an insider threat and fixed a firewall! ðŸ›¡ï¸</p>
         </div>
       )}
     </div>

@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+﻿import React, { useEffect, useRef, useState } from 'react';
 import axios from 'axios';
 
 const Concept = () => {
@@ -27,7 +27,7 @@ const Concept = () => {
 
   return (
     <div className="intro-container p-6 bg-gradient-to-br from-gray-900 via-slate-800 to-gray-700 text-white rounded-2xl shadow-2xl max-w-2xl mx-auto mt-12">
-      <h1 className="text-4xl font-black mb-5 text-emerald-400 flex items-center gap-2">🛡️ Cybersecurity 101</h1>
+      <h1 className="text-4xl font-black mb-5 text-emerald-400 flex items-center gap-2">ðŸ›¡ï¸ Cybersecurity 101</h1>
       <p className="mb-2 text-lg">Cybersecurity protects systems and networks from digital threats.</p>
       <p className="mb-2 text-lg">It ensures confidentiality, integrity, and availability of data.</p>
       <p className="mb-6 text-lg">You're about to begin a journey to understand and apply cybersecurity skills!</p>
@@ -35,7 +35,7 @@ const Concept = () => {
       <input
         ref={inputRef}
         type="text"
-        placeholder="💬 Share your thoughts..."
+        placeholder="ðŸ’¬ Share your thoughts..."
         className="border border-emerald-500 bg-slate-900 text-white px-4 py-2 rounded-md w-full focus:outline-none focus:ring-2 focus:ring-emerald-400 mb-6 placeholder:text-slate-400"
       />
 

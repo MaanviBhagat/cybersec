@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+﻿import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import ReturnToHome from "../ReturnToHome";
+import ReturnToHome from "./ReturnToHome";
 import "./Level7.css";
-import NextLevel from "../NextLevel";
+import NextLevel from "./NextLevel";
 
 const Level7 = () => {
   const [completed, setCompleted] = useState(false);
@@ -99,14 +99,14 @@ UPDATE inventory SET quantity = 175 WHERE item_id = 1;`
         transition={{ duration: 1 }}
         className="chat-bubble"
       >
-        <p>🍊 Welcome to Level 6: The Data Harvest!</p>
+        <p>ðŸŠ Welcome to Level 6: The Data Harvest!</p>
         <p>
-          📦 Your dad runs a booming wholesale vegetable market, but the network
-          is lagging! It’s up to you to get things running by building a
+          ðŸ“¦ Your dad runs a booming wholesale vegetable market, but the network
+          is lagging! Itâ€™s up to you to get things running by building a
           blazing-fast inventory system using Oracle Live SQL!
         </p>
         <p>
-          🎯 Let’s outsmart the chaos with your coding skills and fix this like
+          ðŸŽ¯ Letâ€™s outsmart the chaos with your coding skills and fix this like
           a pro!
         </p>
       </motion.div>
@@ -117,21 +117,21 @@ UPDATE inventory SET quantity = 175 WHERE item_id = 1;`
           onClick={() => handleTaskSelection("Create Database")}
           whileTap={{ scale: 0.95 }}
         >
-          🏗️ Create Database
+          ðŸ—ï¸ Create Database
         </motion.button>
         <motion.button
           className="button"
           onClick={() => handleTaskSelection("Add/Edit Data")}
           whileTap={{ scale: 0.95 }}
         >
-          ✍️ Add/Edit Data
+          âœï¸ Add/Edit Data
         </motion.button>
         <motion.button
           className="button"
           onClick={() => handleTaskSelection("Access Data Anywhere")}
           whileTap={{ scale: 0.95 }}
         >
-          🌐 Access Data Anywhere
+          ðŸŒ Access Data Anywhere
         </motion.button>
       </div>
 
@@ -146,7 +146,7 @@ UPDATE inventory SET quantity = 175 WHERE item_id = 1;`
             className="chat-bubble"
           >
             <p>
-              ✅ Awesome! <strong>{task}</strong> is a crucial skill to master
+              âœ… Awesome! <strong>{task}</strong> is a crucial skill to master
               for building a reliable inventory system. Keep going!
             </p>
           </motion.div>
@@ -155,7 +155,7 @@ UPDATE inventory SET quantity = 175 WHERE item_id = 1;`
 
       {task === "Create Database" && (
         <div className="table-preview">
-          <h4>🧾 Inventory Table Design</h4>
+          <h4>ðŸ§¾ Inventory Table Design</h4>
           <table>
             <thead>
               <tr>
@@ -197,14 +197,14 @@ UPDATE inventory SET quantity = 175 WHERE item_id = 1;`
 
       <div className="sql-area">
         <div className="sql-input">
-          <h4>💻 SQL Editor</h4>
+          <h4>ðŸ’» SQL Editor</h4>
           <textarea value={sql} onChange={(e) => setSql(e.target.value)} />
           <button className="run-btn" onClick={handleRunQuery}>
             Run Query
           </button>
         </div>
         <div className="sql-output">
-          <h4>📊 Result</h4>
+          <h4>ðŸ“Š Result</h4>
           {!showTable ? (
             <pre>{result}</pre>
           ) : (
@@ -257,11 +257,11 @@ UPDATE inventory SET quantity = 175 WHERE item_id = 1;`
             className="info-box"
           >
             <p>
-              📜 <strong>Database Basics:</strong>
+              ðŸ“œ <strong>Database Basics:</strong>
             </p>
-            <p>🔹 CRUD: Create, Read, Update, Delete</p>
-            <p>🔹 Organize product info in tables</p>
-            <p>🔹 Use SQL to query and manage data</p>
+            <p>ðŸ”¹ CRUD: Create, Read, Update, Delete</p>
+            <p>ðŸ”¹ Organize product info in tables</p>
+            <p>ðŸ”¹ Use SQL to query and manage data</p>
             <button className="close-button" onClick={() => setShowInfo(false)}>
               Close
             </button>

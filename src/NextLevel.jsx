@@ -1,4 +1,4 @@
-// NextLevel.js
+﻿// NextLevel.js
 import { useNavigate } from "react-router-dom";
 import "./NextLevel.css";
 
@@ -18,7 +18,7 @@ const NextLevel = ({ completed, onClick, next }) => {
       onClick={handleNextLevelClick}
       disabled={!completed}
     >
-      {completed ? "✅ Completed!" : "Complete Level"}
+      {completed ? "âœ… Completed!" : "Complete Level"}
     </button>
   );
 };

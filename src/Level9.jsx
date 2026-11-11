@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-import ReturnToHome from "../ReturnToHome";
-import NextLevel from "../NextLevel";
+﻿import React, { useState } from "react";
+import ReturnToHome from "./ReturnToHome";
+import NextLevel from "./NextLevel";
 
 // Sample firewall rules
 const spoofRules = [
@@ -23,11 +23,11 @@ const Level9 = () => {
   const handleAnswer = (choice) => {
     setSelected(choice);
     if (choice === "IP Spoofing") {
-      setResult("✅ Correct! IP Spoofing is the technique used here.");
+      setResult("âœ… Correct! IP Spoofing is the technique used here.");
       setSpark(true);
       setTimeout(() => setSpark(false), 2000);
     } else {
-      setResult("❌ Not quite. Review the log again!");
+      setResult("âŒ Not quite. Review the log again!");
     }
   };
 
@@ -41,7 +41,7 @@ const Level9 = () => {
   return (
     <div style={styles.container}>
       <ReturnToHome />
-      <h2 style={styles.heading}>🕵️‍♂️ Level 9: Disguised Intruder</h2>
+      <h2 style={styles.heading}>ðŸ•µï¸â€â™‚ï¸ Level 9: Disguised Intruder</h2>
 
       {/* Step 1: Terminal-style scenario */}
       {step === 1 && (
@@ -54,7 +54,7 @@ const Level9 = () => {
           </div>
 
           <div style={styles.questionBox}>
-            <p>🧠 What attack was used to bypass the internal-only IP restriction?</p>
+            <p>ðŸ§  What attack was used to bypass the internal-only IP restriction?</p>
             {["DNS Spoofing", "MAC Address Spoofing", "IP Spoofing", "SQL Injection"].map((choice) => (
               <button
                 key={choice}
@@ -68,8 +68,8 @@ const Level9 = () => {
               </button>
             ))}
             {result && <p style={styles.result}>{result}</p>}
-            {spark && <div style={styles.spark}>✨ Well done, Agent!</div>}
-            <button onClick={handleNext} style={styles.nextBtn}>Next ➡️</button>
+            {spark && <div style={styles.spark}>âœ¨ Well done, Agent!</div>}
+            <button onClick={handleNext} style={styles.nextBtn}>Next âž¡ï¸</button>
           </div>
         </>
       )}
@@ -77,7 +77,7 @@ const Level9 = () => {
       {/* Step 2: Mini-game - Drag & Drop */}
       {step === 2 && (
         <div style={styles.popup}>
-          <h3>🧪 Spoof Blocker Mini-Game</h3>
+          <h3>ðŸ§ª Spoof Blocker Mini-Game</h3>
           <p>Drag a valid firewall rule into the slot to stop spoofed packets.</p>
 
           <div style={styles.dndContainer}>
@@ -97,10 +97,10 @@ const Level9 = () => {
               onDragOver={(e) => e.preventDefault()}
               onDrop={handleDrop}
             >
-              {dropped ? "🛡️ Spoofing Blocked!" : "🕳️ Firewall Slot"}
+              {dropped ? "ðŸ›¡ï¸ Spoofing Blocked!" : "ðŸ•³ï¸ Firewall Slot"}
             </div>
           </div>
-          <button onClick={handleNext} style={styles.nextBtn}>Continue ➡️</button>
+          <button onClick={handleNext} style={styles.nextBtn}>Continue âž¡ï¸</button>
         </div>
       )}
 
@@ -108,7 +108,7 @@ const Level9 = () => {
       {step === 3 && (
         <>
         <div style={styles.theory}>
-          <h3>📘 Theory Recap</h3>
+          <h3>ðŸ“˜ Theory Recap</h3>
           <p><strong>What is an IP Address?</strong></p>
           <p>
             An IP address is a unique number assigned to each device on a network.
@@ -118,7 +118,7 @@ const Level9 = () => {
           <p>
             IP Spoofing is when an attacker fakes their IP to make it look like they're inside a secure network. This can allow them to bypass IP-based access controls.
           </p>
-          <p>Great job reaching the end of Level 9! 🔒</p>
+          <p>Great job reaching the end of Level 9! ðŸ”’</p>
         </div>
         {!completed && setCompleted(true)}
         <NextLevel completed={completed} next={10} />

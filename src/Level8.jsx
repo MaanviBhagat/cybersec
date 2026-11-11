@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+﻿import React, { useState } from "react";
 import { motion } from "framer-motion";
-import ReturnToHome from "../ReturnToHome";
-import NextLevel from "../NextLevel";
+import ReturnToHome from "./ReturnToHome";
+import NextLevel from "./NextLevel";
 
 const App = () => {
   const [sql, setSql] = useState("");
@@ -33,27 +33,27 @@ const App = () => {
 
     if (useMongo) {
       setResult("[Mock Result] MongoDB document inserted successfully.");
-      setFeedback("✅ MongoDB: Flexible and injection-resistant by design.");
+      setFeedback("âœ… MongoDB: Flexible and injection-resistant by design.");
       return;
     }
 
     if (sql.includes("' OR '1'='1") || sql.toLowerCase().includes("or 1=1")) {
       setFeedback(
-        "🚨 SQL Injection Attempt Blocked! Always use parameterized queries to prevent attacks."
+        "ðŸš¨ SQL Injection Attempt Blocked! Always use parameterized queries to prevent attacks."
       );
       setResult("[Mock Result] Injection attempt blocked.");
     } else if (sql.toLowerCase().includes("select")) {
       setResult("[Mock Result] List of all inventory items...");
-      setFeedback("✅ Query executed safely! Your database is secure.");
+      setFeedback("âœ… Query executed safely! Your database is secure.");
     } else if (sql.toLowerCase().includes("insert")) {
       setResult("[Mock Result] Data inserted successfully!");
-      setFeedback("✅ Inserted successfully.");
+      setFeedback("âœ… Inserted successfully.");
     } else if (sql.toLowerCase().includes("update")) {
       setResult("[Mock Result] Inventory updated!");
-      setFeedback("✅ Updated successfully.");
+      setFeedback("âœ… Updated successfully.");
     } else if (sql.toLowerCase().includes("create table")) {
       setResult("[Mock Result] Table 'inventory' created successfully!");
-      setFeedback("✅ Table created successfully.");
+      setFeedback("âœ… Table created successfully.");
     } else {
       setResult("[Mock Result] Invalid or unsupported SQL query.");
       setFeedback("");
@@ -170,7 +170,7 @@ const App = () => {
         .feedback-box {
           margin-top: 20px;
           padding: 10px;
-          background: ${feedback.includes("🚨") ? "#f44336" : "#388e3c"};
+          background: ${feedback.includes("ðŸš¨") ? "#f44336" : "#388e3c"};
           color: white;
           border-radius: 5px;
         }
@@ -205,38 +205,38 @@ const App = () => {
         }
       `}</style>
 
-      <div id="hacker-attack">💻⚠️</div>
+      <div id="hacker-attack">ðŸ’»âš ï¸</div>
 
       <div>
         <motion.button
           className="button"
           onClick={() => handleTaskSelection("Create Database")}
         >
-          🏗️ Create Database
+          ðŸ—ï¸ Create Database
         </motion.button>
         <motion.button
           className="button"
           onClick={() => handleTaskSelection("Add/Edit Data")}
         >
-          ✍️ Add/Edit Data
+          âœï¸ Add/Edit Data
         </motion.button>
         <motion.button
           className="button"
           onClick={() => handleTaskSelection("Access Data Anywhere")}
         >
-          🌐 Access Data Anywhere
+          ðŸŒ Access Data Anywhere
         </motion.button>
         <motion.button
           className="button"
           onClick={() => handleTaskSelection("Try MongoDB")}
         >
-          🍃 Try MongoDB
+          ðŸƒ Try MongoDB
         </motion.button>
       </div>
 
       <div className="sql-area">
         <div className="sql-input">
-          <h4>{useMongo ? "🍃 MongoDB Editor" : "💻 SQL Editor"}</h4>
+          <h4>{useMongo ? "ðŸƒ MongoDB Editor" : "ðŸ’» SQL Editor"}</h4>
           <textarea
             value={useMongo ? mongoQuery : sql}
             onChange={(e) =>
@@ -258,7 +258,7 @@ const App = () => {
           </div>
         </div>
         <div className="sql-output">
-          <h4>📊 Result</h4>
+          <h4>ðŸ“Š Result</h4>
           <pre>{result}</pre>
         </div>
       </div>

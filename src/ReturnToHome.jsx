@@ -1,4 +1,4 @@
-// ReturnToHome.js
+﻿// ReturnToHome.js
 import { useNavigate } from "react-router-dom";
 import "./ReturnToHome.css";
 
@@ -12,7 +12,7 @@ const ReturnToHome = () => {
 
   return (
     <a href="/" className="home-button" onClick={handleHomeClick}>
-      <span className="home-icon">🏠</span>
+      <span className="home-icon">ðŸ </span>
       <span>Back to All Levels</span>
     </a>
   );

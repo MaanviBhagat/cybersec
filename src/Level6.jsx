@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-import ReturnToHome from "../ReturnToHome";
-import NextLevel from "../NextLevel";
+﻿import React, { useState } from "react";
+import ReturnToHome from "./ReturnToHome";
+import NextLevel from "./NextLevel";
 
 const Level6 = () => {
   const [suspect, setSuspect] = useState(null);
@@ -38,12 +38,12 @@ const Level6 = () => {
   const submitMinigame = () => {
     if (codeInput === "4312") {
       setMinigameResult(
-        "✅ Correct! You've accessed the hidden CCTV footage revealing the best friend unlocking the file vault."
+        "âœ… Correct! You've accessed the hidden CCTV footage revealing the best friend unlocking the file vault."
       );
       setCompleted(true);
     } else {
       setMinigameResult(
-        "❌ Incorrect code! Try decoding the evidence again using the locker number clues."
+        "âŒ Incorrect code! Try decoding the evidence again using the locker number clues."
       );
     }
   };
@@ -220,10 +220,10 @@ const Level6 = () => {
       <div className="chat-bar">
         <div className="chat-bubble">
           <p>
-            🚨 Cyber Crime Scene Unfolded! 🚨 A top-secret locker containing
+            ðŸš¨ Cyber Crime Scene Unfolded! ðŸš¨ A top-secret locker containing
             confidential student records was digitally breached. All digital
             signs point to someone within her inner circle. Examine clues, trust
-            your instincts, and identify the culprit to unlock the vault! 🕵️‍♀️🔍
+            your instincts, and identify the culprit to unlock the vault! ðŸ•µï¸â€â™€ï¸ðŸ”
           </p>
         </div>
         <div>
@@ -245,9 +245,9 @@ const Level6 = () => {
             {suspect === "Best Friend" ? (
               <>
                 <p>
-                  ✅ Nailed it! The best friend was caught red-handed bypassing
+                  âœ… Nailed it! The best friend was caught red-handed bypassing
                   digital security using the victim's passphrase. Never overlook
-                  basic access hygiene! 🔐
+                  basic access hygiene! ðŸ”
                 </p>
                 {!minigameStarted && (
                   <button className="button" onClick={startMinigame}>
@@ -257,7 +257,7 @@ const Level6 = () => {
               </>
             ) : (
               <p>
-                ❌ Not quite! Suspicion alone isn't proof. The boyfriend looked
+                âŒ Not quite! Suspicion alone isn't proof. The boyfriend looked
                 shady, but the breach was traced to the best friend.
               </p>
             )}
@@ -266,7 +266,7 @@ const Level6 = () => {
       </div>
       {!minigameStarted && (
         <div className="hint-box">
-          <p>📝 Hints:</p>
+          <p>ðŸ“ Hints:</p>
           {revealedHints.map((hint, index) => (
             <p key={index}>{hint}</p>
           ))}
@@ -279,7 +279,7 @@ const Level6 = () => {
       )}
       {minigameStarted && (
         <div className="minigame-container">
-          <h3>🔒 Keypad Mini-Game: Crack the Vault</h3>
+          <h3>ðŸ”’ Keypad Mini-Game: Crack the Vault</h3>
           <p>
             Use the clues from the image to decode the 4-digit locker number
             (Hint: reverse her locker number!).
@@ -291,7 +291,7 @@ const Level6 = () => {
             {[1, 2, 3, 4, 5, 6, 7, 8, 9, "C", 0, ""].map((num, i) =>
               num === "C" ? (
                 <div key={i} className="key" onClick={clearLastDigit}>
-                  ⌫
+                  âŒ«
                 </div>
               ) : num !== "" ? (
                 <div
@@ -316,7 +316,7 @@ const Level6 = () => {
           {minigameResult && <p>{minigameResult}</p>}
         </div>
       )}
-      {minigameResult && minigameResult.includes("✅") && (
+      {minigameResult && minigameResult.includes("âœ…") && (
         <div style={{ marginTop: "20px" }}>
           <NextLevel completed={completed} next={7} />
         </div>

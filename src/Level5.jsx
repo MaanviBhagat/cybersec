@@ -1,7 +1,7 @@
-
+﻿
 import React, { useState } from "react";
-import ReturnToHome from "../ReturnToHome";
-import NextLevel from "../NextLevel";
+import ReturnToHome from "./ReturnToHome";
+import NextLevel from "./NextLevel";
 
 const Level5 = () => {
   const [username, setUsername] = useState("");
@@ -124,11 +124,11 @@ const Level5 = () => {
           numbers, and symbols.
         </p>
         <p>
-          <strong>Do’s:</strong> Use long, complex passwords. Enable two-factor
+          <strong>Doâ€™s:</strong> Use long, complex passwords. Enable two-factor
           authentication.
         </p>
         <p>
-          <strong>Don’ts:</strong> Don’t use common words or personal
+          <strong>Donâ€™ts:</strong> Donâ€™t use common words or personal
           information.
         </p>
         <p>

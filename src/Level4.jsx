@@ -1,14 +1,14 @@
-import React, { useState } from "react";
+﻿import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import { Wrench, Lightbulb } from "lucide-react";
-import ReturnToHome from "../ReturnToHome";
+import ReturnToHome from "./ReturnToHome";
 
 const hints = [
   "Make sure the cable wires follow the T568B color sequence.",
   "Apply firm but even pressure when crimping.",
   "Ensure the jacket is inside the RJ45 connector.",
-  "If one pin doesn’t connect, the whole cable could fail!",
+  "If one pin doesnâ€™t connect, the whole cable could fail!",
 ];
 
 export default function CrimpingChallenge() {
@@ -35,14 +35,14 @@ export default function CrimpingChallenge() {
   return (
     <div style={{ padding: "30px", maxWidth: "700px", margin: "0 auto" }}>
       <ReturnToHome />
-      <h1 style={{ fontSize: "28px", color: "red" }}>⚠️ Network Disaster Strikes!</h1>
+      <h1 style={{ fontSize: "28px", color: "red" }}>âš ï¸ Network Disaster Strikes!</h1>
       <p style={{ fontSize: "18px" }}>
-        Your network is crawling. The Ethernet cable’s crimp looks suspicious...
+        Your network is crawling. The Ethernet cableâ€™s crimp looks suspicious...
         Can you fix it before the entire lab comes to a screeching halt?
       </p>
 
       <div style={{ border: "1px solid #ccc", padding: "20px", borderRadius: "10px", marginTop: "30px" }}>
-        <h2 style={{ fontSize: "22px" }}>🔧 Crimping Task</h2>
+        <h2 style={{ fontSize: "22px" }}>ðŸ”§ Crimping Task</h2>
         {!gameOver ? (
           <>
             <motion.div
@@ -76,7 +76,7 @@ export default function CrimpingChallenge() {
                 cursor: "pointer",
               }}
             >
-              🛠 Attempt Crimp Fix
+              ðŸ›  Attempt Crimp Fix
             </button>
             <p style={{ fontSize: "14px", color: "#555", marginTop: "10px" }}>Attempts: {attempts}</p>
           </>
@@ -96,7 +96,7 @@ export default function CrimpingChallenge() {
                 cursor: "pointer",
               }}
             >
-              ➔ Next Level
+              âž” Next Level
             </button>
           </div>
         )}
