@@ -2,21 +2,21 @@ import { useState } from 'react';
 import './App.css';
 import { Route, Routes } from 'react-router-dom';
 
-import HomePage from './Pages/HomePage';
-import Bonus from './Pages/Bonus';
-import Level1 from './Pages/Level1';
-import Level2 from './Pages/Level2';
-import Level3 from './Pages/Level3';
-import Level4 from './Pages/Level4';
-import Level5 from './Pages/Level5';
-import Level6 from './Pages/Level6';
-import Level7 from './Pages/Level7';
-import Level8 from './Pages/Level8';
-import Level9 from './Pages/Level9';
-import Level10 from './Pages/Level10';
-import Concept from './Pages/Concept';
-import Login from './Pages/Login';
-import Signup from './Pages/Signup';
+import HomePage from './HomePage';
+import Bonus from './Bonus';
+import Level1 from './Level1';
+import Level2 from './Level2';
+import Level3 from './Level3';
+import Level4 from './Level4';
+import Level5 from './Level5';
+import Level6 from './Level6';
+import Level7 from './Level7';
+import Level8 from './Level8';
+import Level9 from './Level9';
+import Level10 from './Level10';
+import Concept from './Concept';
+import Login from './Login';
+import Signup from './Signup';
 
 function App() {
   const [count, setCount] = useState(0);
